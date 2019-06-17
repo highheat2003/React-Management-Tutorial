@@ -4,3 +4,5 @@
 ## 참고한 강좌 주소
 https://www.youtube.com/playlist?list=PLRx0vPvlEmdCED62ZIWCbI-6G_jcwmuFB
 
+## 실행
+npm run dev
