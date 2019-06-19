@@ -35,9 +35,10 @@ class App extends React.Component {
       customers: '',
       completed: 0
     };
+    this.stateRefresh = this.stateRefresh.bind(this);
   }
 
-  stateRefresh = () => {
+  stateRefresh(){
     this.setState({
       customers: '',
       completed: 0
@@ -80,12 +81,14 @@ class App extends React.Component {
                 <TableCell>생년월일</TableCell>
                 <TableCell>성별</TableCell>
                 <TableCell>직업</TableCell>
+                <TableCell>설정</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               { this.state.customers ?
                 this.state.customers.map(c => {
                   return(<Customer
+                    stateRefresh={this.stateRefresh}
                     key={c.id}
                     id={c.id}
                     image={c.image}
