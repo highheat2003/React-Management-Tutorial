@@ -39,7 +39,7 @@ const styles = theme => ({
     fontSize: '1.0rem'
   },
   progress: {
-    margin: theme.spacing.unit*2
+    margin: theme.spacing(2)
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -99,11 +99,10 @@ class App extends React.Component {
       customers: '',
       completed: 0,
       searchKeyword: ''
-    };
-    this.stateRefresh = this.stateRefresh.bind(this);
+    };    
   }
 
-  stateRefresh(){
+  stateRefresh = () => {
     this.setState({
       customers: '',
       completed: 0,
@@ -189,8 +188,8 @@ class App extends React.Component {
           <Table className={classes.table}>
             <TableHead>
               <TableRow>
-                {cellList.map(c => {
-                  return <TableCell className={classes.tableHead}>{c}</TableCell>
+                {cellList.map((c,i) => {
+                  return <TableCell className={classes.tableHead} key={i}>{c}</TableCell>
                 })}
               </TableRow>
             </TableHead>

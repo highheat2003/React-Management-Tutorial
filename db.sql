@@ -4,3 +4,9 @@ INSERT INTO customer VALUES (2, 'https://placeimg.com/64/64/2','홍길동','9212
 
 INSERT INTO customer VALUES (3, 'https://placeimg.com/64/64/3','아무개','921212','남자','직장인');
 
+SELECT * FROM customer;
+
+UPDATE customer SET createdDate = NOW();
+
+UPDATE customer SET isdeleted = 0;
+
